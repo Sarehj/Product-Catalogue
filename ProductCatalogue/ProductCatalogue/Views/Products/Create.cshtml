@@ -1,0 +1,55 @@
+@model ProductCatalogue.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="box-conatiner">
+    <div class="row">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <div class="input-group">
+                    <select asp-for="Type" class="form-control">
+                        <option disabled selected value="">Select Type</option>
+                        <option value="Integrated">Integrated</option>
+                        <option value="Peripheral">Peripheral</option>
+                    </select>
+                    <div class="input-group-append" >
+                        <button class="btn btn-outline-secondary" type="button">
+                           <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Arrow.svg"> </object>
+                        </button>
+                    </div>
+                </div>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="Create" class="add-btn">
+                    Save <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Save.svg"></object>
+                </button>
+            </div>
+        </form>
+        <button value="Cancel" onclick="window.location.href='@Url.Action("Index")'" class="cancel-btn">
+          Cancel <i class="fa fa-solid fa-ban"></i>
+        </button>
+
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

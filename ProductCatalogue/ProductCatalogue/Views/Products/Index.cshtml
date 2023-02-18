@@ -1,0 +1,53 @@
+@model IEnumerable<ProductCatalogue.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/site.css">
+<div class="index-container">
+<table class="table">
+    <thead style="border-bottom-color: white;">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+               <div> @Html.DisplayFor(modelItem => item.Name)</div>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">
+                  <button class="ED-btn">
+                    Edit <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Edit.svg"></object>
+                  </button>
+                </a> 
+                <a asp-action="Delete" asp-route-id="@item.id">
+                   <button class="ED-btn">
+                     Delete <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Delete.svg"></object>
+                   </button>
+                </a>
+            </td>
+        </tr>    
+}
+    </tbody>
+</table>
+   <a asp-action="Create"> 
+    <button class="add-btn">Add +</button>
+   </a>
+</div>

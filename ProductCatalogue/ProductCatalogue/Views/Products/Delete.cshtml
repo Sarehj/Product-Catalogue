@@ -1,0 +1,23 @@
+@model ProductCatalogue.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<div class="delete-conatiner">
+    <h4 class="delete-q">Are you sure you want to delete "@Model.Name"?</h4>
+    <div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="id" />
+            <button type="submit" value="Create" class="delete-btn">
+                Delete <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Delete.svg"> </object>
+            </button>    
+        </form>
+        <button value="Cancel" onclick="window.location.href='@Url.Action("Index")'" class="cancelD-btn">
+             Cancel 
+             <i class="fa fa-solid fa-ban"></i>
+                @* <object class="icon" type="image/svg+xml" data="~/Assets/Icons_Delete.svg"> </object> *@
+        </button>
+    </div>
+</div>

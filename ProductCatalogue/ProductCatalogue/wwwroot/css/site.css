@@ -1,0 +1,132 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .box-conatiner {
+    width: 800px;
+    margin: 50px 0 0 160px; 
+  }
+  .delete-conatiner {
+    width: 700px;
+    margin: 100px 0 0 190px;
+    text-align: center;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+/* Index */
+
+.table>thead>tr>td, .table>thead>tr>th
+{
+  border: 0
+} 
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  text-align: center;
+}
+
+.table>tbody>tr {
+  border-radius: 10px;
+  background-color: rgb(230, 230, 230);
+  height: 3rem;
+  box-shadow: 1px 4px 5px 2px rgb(164, 164, 164);
+} 
+.index-container {
+  max-width: calc(100% - 100px);
+}
+
+.ED-btn, .add-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #18b876;
+  color: white;
+  height: 2rem;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration:none;
+}
+
+.add-btn {
+  margin-bottom: 50px;
+  width: 8rem;
+}
+
+/* Edit */
+.box-conatiner, .delete-conatiner {
+  border: black solid thin;
+  border-radius: 5px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 4px 5px 3px rgb(164, 164, 164);
+
+}
+
+.form-group {
+  padding: 5px;
+}
+.form-group select, .form-group input {
+  background-color: #ECF0EE;
+}
+.form-group label{
+  margin-bottom: 5px;
+}
+.cancel-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #c8c7c7;
+  width: 8rem;
+  height: 2rem;
+  margin-left: 40rem;
+  margin-top: -5.3rem;
+}
+
+/* Delete */
+.delete-q {
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+.delete-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #18b876;
+  color: white;
+  height: 2.5rem;
+  width: 7rem;
+  padding: 0 10px;
+  margin-left: 2rem;
+  float: left;
+}
+
+.cancelD-btn{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #c8c7c7;
+  width: 7rem;
+  height: 2.5rem;
+  margin-left: 20rem;
+  margin-bottom: 1rem;
+}
+
+.icon{
+  width: 12px;
+  height: 18px;
+ margin-bottom: -3px;
+} 
